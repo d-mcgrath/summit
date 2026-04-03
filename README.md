@@ -55,11 +55,11 @@ To run Summit, users need:
   - `tidyverse 2.0.0`
 - MEME Suite `fimo` on `PATH` if `run_fimo=true`
 - the `merged_regulatory_features` bundle installed under `data/merged_regulatory_features_bgz`
-- local motif resource files for FIMO:
-  - JASPAR MEME
-  - JASPAR TRANSFAC
-  - CIS-BP MEME
-  - CIS-BP TF information
+- bundled motif resource files for FIMO under `data/fimo_motif_data`:
+  - `JASPAR2024_CORE_non-redundant_pfms_meme.txt`
+  - `JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt`
+  - `CIS-BP/cisbp_all_motifs.meme`
+  - `CIS-BP/TF_Information_all_motifs_plus.txt`
 
 The bundled regulatory features and built-in references are expected to use hg38 coordinates, so Summit input variants should also be supplied on hg38 coordinates.
 
@@ -75,6 +75,12 @@ This installs the bundle to:
 
 ```text
 data/merged_regulatory_features_bgz
+```
+
+The repository also includes bundled motif reference files for FIMO in:
+
+```text
+data/fimo_motif_data
 ```
 
 ## Quick Start

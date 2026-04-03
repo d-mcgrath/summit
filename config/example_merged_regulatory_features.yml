@@ -13,10 +13,10 @@ flank_bp: 20
 # containing `fimo`, so meme_bin can usually be omitted.
 # meme_bin: /path/to/meme/bin
 
-jaspar_motifs: data/meme_data/JASPAR2024_CORE_non-redundant_pfms_meme.txt
-jaspar_transfac: data/meme_data/JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt
-cisbp_meme: data/meme_data/CIS-BP/cisbp_all_motifs.meme
-cisbp_info: data/meme_data/CIS-BP/TF_Information_all_motifs_plus.txt
+jaspar_motifs: data/fimo_motif_data/JASPAR2024_CORE_non-redundant_pfms_meme.txt
+jaspar_transfac: data/fimo_motif_data/JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt
+cisbp_meme: data/fimo_motif_data/CIS-BP/cisbp_all_motifs.meme
+cisbp_info: data/fimo_motif_data/CIS-BP/TF_Information_all_motifs_plus.txt
 
 # Optional FIMO background model. If omitted or missing, the pipeline will
 # run FIMO without an explicit background model.

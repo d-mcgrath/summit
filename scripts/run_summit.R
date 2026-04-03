@@ -106,10 +106,10 @@ default_meme_bin <- {
 
 default_paths <- list(
   meme_bin = default_meme_bin,
-  jaspar_motifs = file.path(project_root, "data", "meme_data", "JASPAR2024_CORE_non-redundant_pfms_meme.txt"),
-  jaspar_transfac = file.path(project_root, "data", "meme_data", "JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt"),
-  cisbp_meme = file.path(project_root, "data", "meme_data", "CIS-BP", "cisbp_all_motifs.meme"),
-  cisbp_info = file.path(project_root, "data", "meme_data", "CIS-BP", "TF_Information_all_motifs_plus.txt"),
+  jaspar_motifs = file.path(project_root, "data", "fimo_motif_data", "JASPAR2024_CORE_non-redundant_pfms_meme.txt"),
+  jaspar_transfac = file.path(project_root, "data", "fimo_motif_data", "JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt"),
+  cisbp_meme = file.path(project_root, "data", "fimo_motif_data", "CIS-BP", "cisbp_all_motifs.meme"),
+  cisbp_info = file.path(project_root, "data", "fimo_motif_data", "CIS-BP", "TF_Information_all_motifs_plus.txt"),
   fimo_bg = file.path(project_root, "data", "fimo_background_models", "fimo_bg_model_2nd_order.txt"),
   merged_regulatory_features_bgz_dir = file.path(project_root, "data", "merged_regulatory_features_bgz"),
   merged_regulatory_features_prefix = "merged_regulatory_features"
