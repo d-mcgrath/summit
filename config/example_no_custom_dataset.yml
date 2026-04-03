@@ -1,0 +1,23 @@
+run_id: example_no_custom_dataset
+output_dir: output/example_no_custom_dataset
+variants_file: config/example_variants.txt
+run_fimo: false
+force_fimo: false
+flank_bp: 20
+merged_regulatory_features_bgz_dir: data/merged_regulatory_features_bgz
+merged_regulatory_features_prefix: merged_regulatory_features
+
+# Built-in merged regulatory features bundle only.
+# Corresponding CLI example:
+# Rscript scripts/run_pipeline.R \
+#   --config=config/example_no_custom_dataset.yml
+# Or equivalently:
+# Rscript scripts/run_pipeline.R \
+#   --run-id=example_no_custom_dataset \
+#   --output-dir=output/example_no_custom_dataset \
+#   --variants-file=config/example_variants.txt \
+#   --run-fimo=false \
+#   --force-fimo=false \
+#   --flank-bp=20 \
+#   --merged-regulatory-features-bgz-dir=data/merged_regulatory_features_bgz \
+#   --merged-regulatory-features-prefix=merged_regulatory_features

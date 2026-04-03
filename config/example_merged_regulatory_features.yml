@@ -1,0 +1,31 @@
+run_id: merged_regulatory_features_test
+output_dir: output/merged_regulatory_features_test
+
+# Example MUTYH-region SNPs in chr:pos:ref:alt format
+# variants: chr1:45439711:G:T,chr1:45480226:C:T,chr1:45506087:T:C,chr1:45540036:G:T
+variants: chr1:45551015:T:C
+
+# Set this to true if you want motif scanning too.
+run_fimo: true
+flank_bp: 20
+
+# If MEME Suite is on PATH, the pipeline will auto-detect the directory
+# containing `fimo`, so meme_bin can usually be omitted.
+# meme_bin: /path/to/meme/bin
+
+jaspar_motifs: data/meme_data/JASPAR2024_CORE_non-redundant_pfms_meme.txt
+jaspar_transfac: data/meme_data/JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt
+cisbp_meme: data/meme_data/CIS-BP/cisbp_all_motifs.meme
+cisbp_info: data/meme_data/CIS-BP/TF_Information_all_motifs_plus.txt
+
+# Optional FIMO background model. If omitted or missing, the pipeline will
+# run FIMO without an explicit background model.
+# fimo_bg: data/fimo_background_models/fimo_bg_model_2nd_order.txt
+
+# Directory containing:
+#   merged_regulatory_features_chr1.tsv.bgz
+#   merged_regulatory_features_chr1.tsv.bgz.tbi
+#   merged_regulatory_features_chr2.tsv.bgz
+#   merged_regulatory_features_chr2.tsv.bgz.tbi
+merged_regulatory_features_bgz_dir: data/merged_regulatory_features_bgz
+merged_regulatory_features_prefix: merged_regulatory_features

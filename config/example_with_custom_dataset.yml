@@ -1,0 +1,44 @@
+run_id: example_with_custom_dataset
+output_dir: output/example_with_custom_dataset
+variants: chr1:45439711:G:T,chr1:45480226:C:T
+run_fimo: true
+force_fimo: false
+flank_bp: 20
+jaspar_motifs: data/meme_data/JASPAR2024_CORE_non-redundant_pfms_meme.txt
+jaspar_transfac: data/meme_data/JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt
+cisbp_meme: data/meme_data/CIS-BP/cisbp_all_motifs.meme
+cisbp_info: data/meme_data/CIS-BP/TF_Information_all_motifs_plus.txt
+merged_regulatory_features_bgz_dir: data/merged_regulatory_features_bgz
+merged_regulatory_features_prefix: merged_regulatory_features
+
+custom_dataset_name: example_custom_peaks
+custom_dataset_file: /path/to/custom_dataset.tsv.gz
+custom_dataset_files: null
+custom_dataset_glob: null
+custom_dataset_chr_col: chrom
+custom_dataset_start_col: start
+custom_dataset_end_col: end
+custom_dataset_delim: tsv
+custom_dataset_has_header: true
+custom_dataset_zero_based: false
+
+# Single custom tabular dataset example.
+# Corresponding CLI example:
+# Rscript scripts/run_pipeline.R \
+#   --config=config/example_with_custom_dataset.yml
+# Or equivalently:
+# Rscript scripts/run_pipeline.R \
+#   --run-id=example_with_custom_dataset \
+#   --output-dir=output/example_with_custom_dataset \
+#   --variants=chr1:45439711:G:T,chr1:45480226:C:T \
+#   --run-fimo=true \
+#   --merged-regulatory-features-bgz-dir=data/merged_regulatory_features_bgz \
+#   --merged-regulatory-features-prefix=merged_regulatory_features \
+#   --custom-dataset-name=example_custom_peaks \
+#   --custom-dataset-file=/path/to/custom_dataset.tsv.gz \
+#   --custom-dataset-chr-col=chrom \
+#   --custom-dataset-start-col=start \
+#   --custom-dataset-end-col=end \
+#   --custom-dataset-delim=tsv \
+#   --custom-dataset-has-header=true \
+#   --custom-dataset-zero-based=false

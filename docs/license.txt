@@ -1,0 +1,26 @@
+Merged Regulatory Features Dataset
+Copyright (c) 2026 David Geller-McGrath and contributors
+
+License for this derivative dataset bundle: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+License URL: https://creativecommons.org/licenses/by-nc/4.0/
+
+You are free to:
+- Share: copy and redistribute the material in any medium or format
+- Adapt: remix, transform, and build upon the material
+
+Under the following terms:
+- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+- NonCommercial: You may not use the material for commercial purposes.
+- No additional restrictions: You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+This license file applies to the merged_regulatory_features derivative bundle distributed with this project, not automatically to all upstream third-party source datasets or to all files in this repository.
+
+This derivative bundle incorporates and transforms data from the following upstream resources:
+- ChIP-Atlas
+- ReMap 2022
+- Atlas of Transcription Factor Binding Sites from ENCODE DNase Hypersensitivity Data across 27 Tissue Types
+
+Users must preserve attribution to those upstream resources.
+
+Important notice:
+Before redistributing this derivative bundle on Zenodo, GitHub, or elsewhere, verify that your intended redistribution terms are compatible with the terms, licenses, and usage conditions of all upstream data sources.
