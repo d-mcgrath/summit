@@ -32,15 +32,6 @@ chr1:45439711:G:T
 chr1:45480226:C:T
 ```
 
-Example test variants:
-
-```text
-chr1:45439711:G:T
-chr1:45480226:C:T
-chr1:45506087:T:C
-chr1:45540036:G:T
-```
-
 ## Requirements
 
 To run Summit, users need:
