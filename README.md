@@ -47,19 +47,19 @@ To run Summit, users need:
 
 - R with the required CRAN/Bioconductor packages used by `scripts/run_summit.R`
 - required R packages:
-  - Bioconductor: `BSgenome`, `BSgenome.Hsapiens.UCSC.hg38`, `SNPlocs.Hsapiens.dbSNP155.GRCh38`, `GenomicRanges`, `Rsamtools`, `Biostrings`
-  - CRAN: `memes`, `universalmotif`, `tidyverse`
-- package versions are expected to follow a mutually compatible R / Bioconductor release
-- versions detected in the current development environment include:
-  - `Biostrings 2.74.0`
-  - `tidyverse 2.0.0`
+  - Bioconductor:
+    - `BSgenome >= 1.74.0`
+    - `BSgenome.Hsapiens.UCSC.hg38 >= 1.4.5`
+    - `SNPlocs.Hsapiens.dbSNP155.GRCh38 >= 0.99.24`
+    - `GenomicRanges >= 1.58.0`
+    - `Rsamtools >= 2.22.0`
+    - `Biostrings >= 2.74.1`
+  - CRAN:
+    - `memes >= 1.14.0`
+    - `universalmotif >= 1.24.2`
+    - `tidyverse >= 2.0.0`
 - MEME Suite `fimo` on `PATH` if `run_fimo=true`
 - the `merged_regulatory_features` bundle installed under `data/merged_regulatory_features_bgz`
-- bundled motif resource files for FIMO under `data/fimo_motif_data`:
-  - `JASPAR2024_CORE_non-redundant_pfms_meme.txt`
-  - `JASPAR2024_CORE_vertebrates_non-redundant_pfms_transfac.txt`
-  - `CIS-BP/cisbp_all_motifs.meme`
-  - `CIS-BP/TF_Information_all_motifs_plus.txt`
 
 The bundled regulatory features and built-in references are expected to use hg38 coordinates, so Summit input variants should also be supplied on hg38 coordinates.
 
