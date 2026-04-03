@@ -14,14 +14,64 @@ required_packages <- c(
   "tidyverse"
 )
 
+bioc_packages <- c(
+  "BSgenome",
+  "BSgenome.Hsapiens.UCSC.hg38",
+  "SNPlocs.Hsapiens.dbSNP155.GRCh38",
+  "GenomicRanges",
+  "Rsamtools",
+  "Biostrings"
+)
+
+cran_packages <- c(
+  "memes",
+  "universalmotif",
+  "tidyverse"
+)
+
 missing_packages <- required_packages[!vapply(required_packages, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))]
 
 if (length(missing_packages) > 0) {
-  stop(
-    "Missing required R package(s): ",
-    paste(missing_packages, collapse = ", "),
-    ". Install them before running scripts/run_summit.R."
+  missing_bioc <- intersect(missing_packages, bioc_packages)
+  missing_cran <- intersect(missing_packages, cran_packages)
+
+  lines <- c(
+    "Summit cannot start because required R packages are missing.",
+    "",
+    paste0("Missing packages: ", paste(missing_packages, collapse = ", "))
   )
+
+  if (length(missing_bioc) > 0) {
+    lines <- c(
+      lines,
+      "",
+      "Bioconductor packages to install:",
+      paste0("  ", paste(missing_bioc, collapse = ", ")),
+      paste0(
+        "  Example: BiocManager::install(c(",
+        paste(sprintf('"%s"', missing_bioc), collapse = ", "),
+        "))"
+      )
+    )
+  }
+
+  if (length(missing_cran) > 0) {
+    lines <- c(
+      lines,
+      "",
+      "CRAN packages to install:",
+      paste0("  ", paste(missing_cran, collapse = ", ")),
+      paste0(
+        "  Example: install.packages(c(",
+        paste(sprintf('"%s"', missing_cran), collapse = ", "),
+        "))"
+      )
+    )
+  }
+
+  lines <- c(lines, "", "Install the missing package(s) before running scripts/run_summit.R.")
+  writeLines(lines, con = stderr())
+  quit(save = "no", status = 1)
 }
 
 suppressPackageStartupMessages({
