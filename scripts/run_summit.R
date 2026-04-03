@@ -20,7 +20,7 @@ if (length(missing_packages) > 0) {
   stop(
     "Missing required R package(s): ",
     paste(missing_packages, collapse = ", "),
-    ". Install them before running scripts/run_pipeline.R."
+    ". Install them before running scripts/run_summit.R."
   )
 }
 
@@ -41,7 +41,7 @@ script_file <- script_file_arg[grepl("^--file=", script_file_arg)]
 script_path <- if (length(script_file) > 0) {
   normalizePath(sub("^--file=", "", script_file[[1]]), mustWork = FALSE)
 } else {
-  normalizePath(file.path(getwd(), "scripts", "run_pipeline.R"), mustWork = FALSE)
+  normalizePath(file.path(getwd(), "scripts", "run_summit.R"), mustWork = FALSE)
 }
 script_dir <- dirname(script_path)
 project_root <- normalizePath(file.path(script_dir, ".."), mustWork = FALSE)

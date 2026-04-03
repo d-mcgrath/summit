@@ -321,4 +321,4 @@ fi
 
 echo
 echo "You can now run Summit with:"
-echo "  Rscript scripts/run_pipeline.R --config=config/example_merged_regulatory_features.yml"
+echo "  Rscript scripts/run_summit.R --config=config/example_merged_regulatory_features.yml"
